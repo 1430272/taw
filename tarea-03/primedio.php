@@ -86,9 +86,9 @@
 				}
 				//Creo que desperdicie el metodo 'promedio' de arriba y las propiedades de esta clase
 				//se me agotaba el tiempo
-				
-		echo '<table><thead><tr><th colspan="2">Nombre del alumno</th><th>Unidad 1</th><th>Unidad 2</th><th>Unidad 3</th><th>Promedio</th></tr></thead><tbody>';
-		echo '<tr><td>'.$col[0].'</td><td>'.$col[1].'"</td><td>'.$col[2].'</td><td>'.$col[3].'</td><td>'.$promedio.'</td></tr>';
+
+		echo '<table><thead><tr><th>Nombre del alumno</th><th>Unidad 1</th><th>Unidad 2</th><th>Unidad 3</th><th>Promedio</th></tr></thead><tbody>';
+		echo '<tr><td>'.$col[0].'</td><td>'.$col[1].'</td><td>'.$col[2].'</td><td>'.$col[3].'</td><td>'.$promedio.'</td></tr>';
 		echo '</tbody></table></form>';
 				
 #				echo $col[1].' '.$col[2].' '.$col[3].' '.$promedio.'<br>';
