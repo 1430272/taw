@@ -13,7 +13,6 @@
 
 /*
 ====== REQUERIMENTOS PENDIENTES ======
-4. fotos de las habitaciones
 3,5,6. CRUD reservaciones
 C) - Reportes
 
