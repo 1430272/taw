@@ -1,3 +1,4 @@
+<?php function view_head(){ ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,7 +22,7 @@
 
 <body>
 
-<?php function view_login(){ ?>
+<?php } function view_login(){ ?>
 
     <div class="container">
         <div class="row">
@@ -176,8 +177,10 @@ $ingreso -> ingresoUsuarioController();
 
     </div>
     <!-- /#wrapper -->
-<?php } ?>
+<?php } 
 
+function view_foot(){
+?>
     <!-- Core Scripts - Include with every page -->
     <script src="themes/sb-admin/assets/js/jquery-1.10.2.js"></script>
 <!--    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>-->
@@ -204,3 +207,4 @@ $ingreso -> ingresoUsuarioController();
 
 </body>
 </html>
+<?php } ?>

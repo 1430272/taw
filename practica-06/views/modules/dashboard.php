@@ -1,3 +1,5 @@
+<?php Nucleo::require_session(); ?>
+
 <style>
 .btn-sq-lg {
   width: 150px !important;

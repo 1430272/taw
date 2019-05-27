@@ -1,4 +1,5 @@
 <?php
+#error_reporting(1);
 
 /*
 ====== REQUERIMENTOS PARA LA PRACTICA 06 ======

@@ -27,12 +27,49 @@ class HabitacionesModel extends Conexion{
 	#-------------------------------------
 
 	public static function mostrar_habitaciones($tabla_1, $tabla_2){
-		$stmt = Conexion::conectar()->prepare("SELECT 
-	t1.*, t1.id as t1_id,
-	t2.id as t2_id, 
-	t2.categoria as categoria 
-FROM $tabla_1 AS t1, $tabla_2 AS t2 
-WHERE t1.tipo = t2.id");	
+		
+		
+		// .../index.php?action=lista-habitaciones 		& filtrar-disponibilidad=0 & filtrar-tipo=1 & precio-min = 100 & precio-max = 200
+		
+		if(isset($_GET["filtrar-disponibilidad"])){
+			if($_GET["filtrar-disponibilidad"]=="0"){	//0 = desocupado
+				$filtro_estatus = " AND t1.estatus = '0' ";
+			}
+			if($_GET["filtrar-disponibilidad"]=="1"){	//1 = ocupado
+				$filtro_estatus = " AND t1.estatus = '1' ";
+			}
+		} else {
+			$filtro_estatus = "";	//Default = NULL
+		}
+
+		if(isset($_GET["filtrar-tipo"])){
+			if($_GET["filtrar-tipo"]=="1"){	//1 = Simple
+				$filtro_tipo = " AND t2.id = '1' ";
+			}
+			if($_GET["filtrar-tipo"]=="2"){	//2 = Doble
+				$filtro_tipo = " AND t2.id = '2' ";
+			}
+			if($_GET["filtrar-tipo"]=="3"){	//3 = Matrimonial
+				$filtro_tipo = " AND t2.id = '3' ";
+			}
+		} else {
+			$filtro_tipo = "";	//Default = NULL
+		}
+
+		if(isset($_GET["precio-min"])){		//o precio minimo
+			$filtro_precio = " AND t1.precio >= '".$_GET["precio-min"]."' ";
+		} else if(isset($_GET["precio-max"])){	//o precio maximo
+			$filtro_precio = " AND t1.precio <= '".$_GET["precio-max"]."' ";
+		} else if(isset($_GET["precio-min"]) && isset($_GET["precio-max"])){	//o ambos rangos de precio
+			$filtro_precio = " AND t1.precio BETWEEN '".$_GET["precio-min"]."' AND '".$_GET["precio-max"]."' ";
+		} else {
+			$filtro_precio = "";	//Default = NULL
+		}
+		
+
+		
+		$stmt = Conexion::conectar()->prepare("SELECT t1.*, t1.id as t1_id, t2.id as t2_id, t2.categoria as categoria 
+		FROM $tabla_1 AS t1, $tabla_2 AS t2 WHERE t1.tipo = t2.id $filtro_estatus $filtro_tipo $filtro_precio ");	
 		$stmt->execute();
 		#fetchAll(): Obtiene todas las filas de un conjunto de resultados asociado al objeto PDOStatement. 
 		return $stmt->fetchAll();

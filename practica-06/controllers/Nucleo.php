@@ -13,8 +13,8 @@ class Nucleo {
 		 */
 		include "themes/"._theme_."/layout.php";
 		
-			if(isset($_GET['action'])  && $_GET['action']=="ingresar-usuario"){ echo view_login(); } else {
-				echo view_general();
+			if(isset($_GET['action'])  && $_GET['action']=="ingresar-usuario"){ echo view_head(); echo view_login(); echo view_foot(); } else {
+				echo view_head(); echo view_general(); echo view_foot();
 			}
 	}
 
@@ -27,7 +27,7 @@ class Nucleo {
 			$enlaces = "dashboard";
 		}
 		
-		if(isset($_GET['action'])  && $_GET['action']=="ingresar-usuario"){ echo view_login(); } else {			
+		if(isset($_GET['action'])  && $_GET['action']=="ingresar-usuario"){ echo view_head(); echo view_login(); echo view_foot(); } else {			
 			$respuesta = Enlaces::enlacesPaginasModel($enlaces);
 			include $respuesta;
 		}

@@ -25,7 +25,6 @@ class Enlaces {
 			$enlaces == "editar-habitacion" ||  
 			$enlaces == "borrar-habitacion" ||
 			$enlaces == "lista-habitaciones" ||
-			$enlaces == "buscar-habitaciones" ||
 			
 			$enlaces == "hacer-reservacion" ||  
 			$enlaces == "editar-reservacion" ||  
@@ -43,6 +42,7 @@ class Enlaces {
 			}
 		} else if($enlaces == "index"){
 			$module =  "views/modules/dashboard.php";
+			Nucleo::require_session();
 #			$enlaces = "dashboard";
 		}
 		 else if($enlaces == "salir"){
