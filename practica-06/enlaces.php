@@ -30,8 +30,7 @@ class Enlaces {
 			$enlaces == "borrar-reservacion" ||  
 			$enlaces == "lista-reservaciones" ||  
 
-			$enlaces == "dashboard" ||  
-			$enlaces == "reportes"
+			$enlaces == "dashboard" 
 
 		){
 			if($enlaces == "ingresar-usuario"){

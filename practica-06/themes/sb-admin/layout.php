@@ -106,9 +106,6 @@ $ingreso -> ingresoUsuarioController();
                             <a href="./"><i class="fa fa-tachometer-alt fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="index.php?action=reportes"><i class="fa fa-chart-bar fa-fw"></i> Reportes</a>
-                        </li>
-                        <li>
                             <a href="#"><i class="fa fa-user fa-fw"></i> Usuarios<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
@@ -145,16 +142,7 @@ $ingreso -> ingresoUsuarioController();
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-calendar fa-fw"></i> Reservaciones<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="index.php?action=hacer-reservacion">Agregar nueva</a>
-                                </li>
-                                <li>
-                                    <a href="index.php?action=lista-reservaciones">Lista</a>
-                                </li>
-                            </ul>
-                            <!-- /.nav-second-level -->
+                            <a href="index.php?action=lista-reservaciones"><i class="fa fa-calendar fa-fw"></i> Reservaciones</a>
                         </li>
                     </ul>
                     <!-- /#side-menu -->

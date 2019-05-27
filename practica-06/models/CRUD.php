@@ -74,6 +74,16 @@ class CRUD extends Conexion {
 #		$stmt->close();
 	}
 	
+	//Calculo de ganancias - Recibe un numero de mes y calcula el total de ganancias dentro del rango de un mes
+	public static function ganancias($mes_numero){
+		$stmt_q = " SELECT SUM(monto_pagado) as count_total FROM practica_06_reservaciones WHERE (fecha_registro BETWEEN '2019-".$mes_numero."-01' AND '2019-".$mes_numero."-30')";
+		$stmt = Conexion::conectar()->prepare($stmt_q);
+		$stmt->execute();	
+		$results = $stmt->fetchall();
+		$getCount = $results[0]['count_total'];
+		return $getCount;
+	}
+	
 	#CRUD
 	//No me parece correcto que el fichero crud.php tenga todos los modelos de cada modulo revueltos en uno solo
 	//En su lugar el directorio "models", tendra solo los modelos pero desde ete metodo se eligira el que se desee segun la action en la URL

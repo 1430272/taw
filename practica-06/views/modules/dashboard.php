@@ -35,7 +35,7 @@
 
       <div class="row">
         <div class="col-lg-12">
-          <p>
+          <center>
             <a href="index.php?action=lista-usuarios" class="btn btn-sq-lg btn-primary" >
                 <i class="fa fa-user fa-5x"></i><br/>
                 Usuarios <br><?php echo CRUD::estadistica("practica_05_users", null, null); ?>
@@ -52,7 +52,25 @@
               <i class="fa fa-calendar fa-5x"></i><br/>
               Reservaciones <br><?php echo CRUD::estadistica("practica_06_reservaciones", null, null); ?>
             </a>
-          </p>
+          </center>
+        </div>
+	</div>
+<hr>
+	<div class="row">
+        <div class="col-lg-12">
+			<h3>Ganancias Por Mes</h3>
+
+<?php
+//Por cada mes, llamo un metodo que sume las ganancias de cada mes
+//El unico problema es que tarda demasiado tiempo en ejecusion
+echo '<table border="1"><tr><th>#Mes</th><th>Ganancias</th></tr>';
+for ($i=0; $i<=12; $i++) {
+	echo '<tr>
+			<th>'.date('m', strtotime("-$i month")).'</th>
+			<td> $'.CRUD::ganancias(date('m', strtotime("-$i month"))).'</td>
+		</tr>';
+ }
+echo '</table>'; ?>
         </div>
 	</div>
  

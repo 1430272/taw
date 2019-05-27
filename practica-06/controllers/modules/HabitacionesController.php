@@ -24,11 +24,18 @@
 		$respuesta = HabitacionesModel::mostrar_habitaciones("practica_06_habitaciones","practica_06_tipo_habitaciones");
 		#El constructor foreach proporciona un modo sencillo de iterar sobre arrays. foreach funciona sólo sobre arrays y objetos, y emitirá un error al intentar usarlo con una variable de un tipo diferente de datos o una variable no inicializada.
 		foreach($respuesta as $row => $item){
+			
+			if($item["estatus"]==0){	//Si la habitacion esta disponible -> mostrar boton
+				$boton_reserva = '<a href="index.php?action=hacer-reservacion&id='.$item["id"].'"><button>RESERVAR</button></a>';
+			} else {
+				$boton_reserva = "[Habitacion ocupada]";
+			}
+			
 		echo'<tr>
 				<td>'.$item["piso"].'</td>
 				<td>'.$item["categoria"].'</td>
 				<td>$'.$item["precio"].'</td>
-				<td><a href="index.php?action=ver-fotos&id='.$item["id"].'"><button>Ver fotos</button></a> - <a href="index.php?action=editar-habitacion&id='.$item["id"].'"><button>Editar</button></a> - <a href="index.php?action=lista-habitaciones&idBorrar='.$item["id"].'"><button>Borrar</button></a></td>
+				<td><a href="index.php?action=ver-fotos&id='.$item["id"].'"><button>Ver fotos</button></a> - <a href="index.php?action=editar-habitacion&id='.$item["id"].'"><button>Editar</button></a> - <a href="index.php?action=lista-habitaciones&idBorrar='.$item["id"].'"><button>Borrar</button></a> - '.$boton_reserva.'</td>
 			</tr>';
 		}
 	}
