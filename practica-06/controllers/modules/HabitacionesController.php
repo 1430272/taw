@@ -28,7 +28,7 @@
 				<td>'.$item["piso"].'</td>
 				<td>'.$item["categoria"].'</td>
 				<td>$'.$item["precio"].'</td>
-				<td><a href="index.php?action=editar-habitacion&id='.$item["id"].'"><button>Editar</button></a> - <a href="index.php?action=lista-habitaciones&idBorrar='.$item["id"].'"><button>Borrar</button></a></td>
+				<td><a href="index.php?action=ver-fotos&id='.$item["id"].'"><button>Ver fotos</button></a> - <a href="index.php?action=editar-habitacion&id='.$item["id"].'"><button>Editar</button></a> - <a href="index.php?action=lista-habitaciones&idBorrar='.$item["id"].'"><button>Borrar</button></a></td>
 			</tr>';
 		}
 	}

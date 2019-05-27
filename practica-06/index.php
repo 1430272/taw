@@ -12,6 +12,14 @@
 */
 
 /*
+====== REQUERIMENTOS PENDIENTES ======
+4. fotos de las habitaciones
+3,5,6. CRUD reservaciones
+C) - Reportes
+
+*/
+
+/*
  * Hice algunos cambios al diseno de este patron MVC para mantener un mejor order,
  * como cambiar el nombre de los ficheros para que sean similar al nombre de la clase 
  * y asi evitar confundir los nombres de los objetos.

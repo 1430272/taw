@@ -18,13 +18,12 @@ class Enlaces {
 
 			$enlaces == "registrar-cliente" || 
 			$enlaces == "editar-cliente" || 
-			$enlaces == "borrar-cliente" || 
 			$enlaces == "lista-clientes" || 
 
 			$enlaces == "registrar-habitacion" ||  
 			$enlaces == "editar-habitacion" ||  
-			$enlaces == "borrar-habitacion" ||
 			$enlaces == "lista-habitaciones" ||
+			$enlaces == "ver-fotos" ||
 			
 			$enlaces == "hacer-reservacion" ||  
 			$enlaces == "editar-reservacion" ||  
