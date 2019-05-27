@@ -14,7 +14,7 @@
 /*
 ====== REQUERIMENTOS PENDIENTES ======
 3,5,6. CRUD reservaciones
-C) - Reportes
+catalogar clientes de acuerdo a su total de reservaciones
 
 */
 

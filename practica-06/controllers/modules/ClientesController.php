@@ -46,6 +46,14 @@
 			 <input type="submit" value="Actualizar">';
 	}
 
+	#Cliente por ID
+	#------------------------------------
+	public static function cliente_por_id($idc){
+		$datosController = $idc;
+		$respuesta = ClientesModel::editar_cliente($datosController, "practica_06_clientes");
+		return $respuesta["nombre_completo"];
+	}
+
 
 	#ACTUALIZAR USUARIO
 	#------------------------------------

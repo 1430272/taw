@@ -27,7 +27,6 @@ class Enlaces {
 			
 			$enlaces == "hacer-reservacion" ||  
 			$enlaces == "editar-reservacion" ||  
-			$enlaces == "borrar-reservacion" ||  
 			$enlaces == "lista-reservaciones" ||  
 
 			$enlaces == "dashboard" 

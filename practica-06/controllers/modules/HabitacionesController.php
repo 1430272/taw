@@ -54,6 +54,14 @@
 			 <input type="submit" value="Actualizar">';
 	}
 
+	#VER_precio individual //Para pagar la reservacion
+	#------------------------------------
+	public function obtener_precio(){
+		$datosController = $_GET["id"];
+		$respuesta = HabitacionesModel::editar_habitacion($datosController, "practica_06_habitaciones", "practica_06_tipo_habitaciones");
+		return $respuesta["precio"];
+	}
+
 
 	#ACTUALIZAR HABITACION
 	#------------------------------------
