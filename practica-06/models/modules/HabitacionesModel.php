@@ -104,6 +104,36 @@ class HabitacionesModel extends Conexion{
 		$stmt->close();
 	}
 
+	#DesOcupar HABITACION - al borrar reservacion
+	#-------------------------------------
+
+	public static function estatus_desocupar($datosModel, $tabla){
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET estatus = :estatus WHERE id = :id");
+		$stmt->bindParam(":estatus", $datosModel["estatus"], PDO::PARAM_STR);
+		$stmt->bindParam(":id", $datosModel["id"], PDO::PARAM_INT);
+		if($stmt->execute()){
+			return "success";
+		} else {
+			return "error";
+		}
+		$stmt->close();
+	}
+
+	#Ocupar HABITACION - al reservar
+	#-------------------------------------
+
+	public static function estatus_ocupar($datosModel, $tabla){
+		$stmt = Conexion::conectar()->prepare("UPDATE $tabla SET estatus = :estatus WHERE id = :id");
+		$stmt->bindParam(":estatus", $datosModel["estatus"], PDO::PARAM_STR);
+		$stmt->bindParam(":id", $datosModel["id"], PDO::PARAM_INT);
+		if($stmt->execute()){
+			return "success";
+		} else {
+			return "error";
+		}
+		$stmt->close();
+	}
+
 
 	#BORRAR HABITACION
 	#------------------------------------

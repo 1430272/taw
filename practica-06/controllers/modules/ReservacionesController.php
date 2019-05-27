@@ -13,6 +13,7 @@
 									  );
 			$respuesta = ReservacionesModel::hacer_reservacion($datosController, "practica_06_reservaciones");
 			if($respuesta == "success"){
+				HabitacionesController::estatus_ocupar($_POST["id_habitacion"]);	//Marcamos la habitacion como ocupada
 				Nucleo::Redirigir("lista-reservaciones");
 			} else {
 				Nucleo::Alerta("Error al registrar");
@@ -37,7 +38,7 @@
 				<td>'.$item["id_habitacion"].'</td>
 				<td>'.$item["monto_pagado"].'</td>
 				<td>'.$item["fecha_registro"].'</td>
-				<td><a href="index.php?action=editar-reservacion&id='.$item["id"].'"><button>Editar</button></a> - <a href="index.php?action=lista-reservaciones&idBorrar='.$item["id"].'"><button>Borrar</button></a></td>
+				<td><a href="index.php?action=editar-reservacion&id='.$item["id"].'"><button>Editar</button></a> - <a href="index.php?action=lista-reservaciones&idBorrar='.$item["id"].'&id_habitacion_desocupar='.$item["id_habitacion"].'"><button>Borrar</button></a></td>
 			</tr>';
 		}
 	}
@@ -56,7 +57,7 @@
 	}
 
 
-	#ACTUALIZAR USUARIO
+	#ACTUALIZAR RESERVACION
 	#------------------------------------
 	public function actualizar_reservacion(){
 		if(isset($_POST["nombre_completo"])){
@@ -74,13 +75,14 @@
 	}
 
 	
-	#BORRAR CLIENTE
+	#BORRAR RESERVACION
 	#------------------------------------
 	public static function borrar_reservacion(){
 		if(isset($_GET["idBorrar"])){
 			$datosController = $_GET["idBorrar"];
 			$respuesta = ReservacionesModel::borrar_reservacion($datosController, "practica_06_reservaciones");
 			if($respuesta == "success"){
+				HabitacionesController::estatus_desocupar($_GET["id_habitacion_desocupar"]);	//Marcamos la habitacion como desocupada y queda libre para reservar
 				Nucleo::Redirigir("lista-reservaciones");
 			}
 		}

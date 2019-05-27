@@ -35,7 +35,10 @@
 				<td>'.$item["piso"].'</td>
 				<td>'.$item["categoria"].'</td>
 				<td>$'.$item["precio"].'</td>
-				<td><a href="index.php?action=ver-fotos&id='.$item["id"].'"><button>Ver fotos</button></a> - <a href="index.php?action=editar-habitacion&id='.$item["id"].'"><button>Editar</button></a> - <a href="index.php?action=lista-habitaciones&idBorrar='.$item["id"].'"><button>Borrar</button></a> - '.$boton_reserva.'</td>
+				<td><a href="index.php?action=ver-fotos&id='.$item["id"].'"><button>Ver fotos</button></a> - 
+					<a href="index.php?action=editar-habitacion&id='.$item["id"].'"><button>Editar</button></a> - 
+					<a href="index.php?action=lista-habitaciones&idBorrar='.$item["id"].'"><button>Borrar</button></a> - 
+					'.$boton_reserva.'</td>
 			</tr>';
 		}
 	}
@@ -80,6 +83,23 @@
 			}
 		}
 	}
+	
+	#DESOCUPAR HABITACION - al borrar reservacion
+	#------------------------------------
+	public static function estatus_desocupar($idh){
+			$datosController = array( "id"=>$idh,
+							          "estatus"=>"0");
+			$respuesta = HabitacionesModel::estatus_desocupar($datosController, "practica_06_habitaciones");
+	}
+
+	#OCUPAR HABITACION - al reservar
+	#------------------------------------
+	public static function estatus_ocupar($idh){
+			$datosController = array( "id"=>$idh,
+							          "estatus"=>"1");
+			$respuesta = HabitacionesModel::estatus_ocupar($datosController, "practica_06_habitaciones");
+	}
+	
 
 	
 	#BORRAR HABITACION
