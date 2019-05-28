@@ -17,7 +17,7 @@
 		<tbody>
 			<?php
 			$vistaUsuario = new ProfesoresController();
-			$vistaUsuario -> mostrar_profefores();
+			$vistaUsuario -> mostrar_profesores();
 			$vistaUsuario -> borrar_profesor();
 			?>
 		</tbody>

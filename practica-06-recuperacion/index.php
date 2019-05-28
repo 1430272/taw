@@ -20,6 +20,8 @@ require_once "enlaces.php";				//Rutas de todos los Modulos
 require_once "controllers/Nucleo.php";	//El controlador principal de todo el MVC (Antes llamado "mvcController")
 require_once "models/CRUD.php";			//Modelos, por default trae metodos
 
+ini_set('memory_limit', '1024M');		//Tuve un problema con que se acabo la memoria durante la ejecucion
+
 $dbt = new CRUD();
 $dbt -> init_all_models(); //Inicializar todos los modelos
 $mvc = new Nucleo();	//Objeto nucleo

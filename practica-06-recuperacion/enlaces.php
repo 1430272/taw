@@ -22,7 +22,7 @@ class Enlaces {
 			$enlaces == "lista-profesores" || 
 
 			$enlaces == "registrar-alumno" || 
-			$enlaces == "editar-alumnos" || 
+			$enlaces == "editar-alumno" || 
 			$enlaces == "lista-alumnos" 
 
 		){

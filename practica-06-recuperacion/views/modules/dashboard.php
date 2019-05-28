@@ -40,11 +40,11 @@
                 <i class="fa fa-user fa-5x"></i><br/>
                 Usuarios <br><?php echo CRUD::estadistica("practica_06_recuperacion_users", null, null); ?>
             </a>
-            <a href="index.php?action=lista-clientes" class="btn btn-sq-lg btn-success">
+            <a href="index.php?action=lista-profesores" class="btn btn-sq-lg btn-success">
               <i class="fa fa-user fa-5x"></i><br/>
               Profesores <br><?php echo CRUD::estadistica("practica_06_recuperacion_profesores", null, null); ?>
             </a>
-            <a href="index.php?action=lista-habitaciones" class="btn btn-sq-lg btn-info">
+            <a href="index.php?action=lista-alumnos" class="btn btn-sq-lg btn-info">
               <i class="fa fa-bed fa-5x"></i><br/>
               Alumnos <br><?php echo CRUD::estadistica("practica_06_recuperacion_alumnos", null, null); ?>
             </a>

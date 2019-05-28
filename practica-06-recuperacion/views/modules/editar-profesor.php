@@ -4,7 +4,7 @@
 
 <form method="post">
 	<?php
-	$editarUsuario = new ProfesorController();
+	$editarUsuario = new ProfesoresController();
 	$editarUsuario -> editar_profesor();
 	$editarUsuario -> actualizar_profesor();
 	?>

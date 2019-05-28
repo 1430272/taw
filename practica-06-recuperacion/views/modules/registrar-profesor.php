@@ -5,15 +5,15 @@
 	<input type="text" placeholder="ID carrera" name="id_carrera" required>
 	<input type="text" placeholder="Nombre completo" name="nombre" required>
 	<input type="text" placeholder="Apellido paterno" name="apellido_paterno" required>
-	<input type="email" placeholder="Apellido materno " name="apellido_materno" required>
-	<input type="telefono" placeholder="email" name="email" required>
+	<input type="text" placeholder="Apellido materno " name="apellido_materno" required>
+	<input type="email" placeholder="email" name="email" required>
 	<input type="submit" value="Enviar">
 
 </form>
 
 <?php
 
-$registro = new AlumnosController();
+$registro = new ProfesoresController();
 $registro -> registrar_profesor();
 
 if(isset($_GET["action"])){
