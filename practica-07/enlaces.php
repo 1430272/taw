@@ -1,3 +1,5 @@
+
+
 <?php 
 class Enlaces {
 	
@@ -23,7 +25,15 @@ class Enlaces {
 
 			$enlaces == "registrar-alumno" || 
 			$enlaces == "editar-alumno" || 
-			$enlaces == "lista-alumnos" 
+			$enlaces == "lista-alumnos" ||
+
+			$enlaces == "registrar-materia"||
+			$enlaces == "lista-materias"||
+			$enlaces == "editar-materia" ||
+			
+			$enlaces == "registrar-grupo"||
+			$enlaces == "lista-grupos"||
+			$enlaces == "editar-grupo"
 
 		){
 			if($enlaces == "ingresar-usuario"){

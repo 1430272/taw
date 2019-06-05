@@ -88,7 +88,7 @@
 	public static function borrar_alumno(){
 		if(isset($_GET["idBorrar"])){
 			$datosController = $_GET["idBorrar"];
-			$respuesta = AlumnosModel::borrar_alumno($datosController, "practica_06_recuperacion_alumnos");
+			$respuesta = AlumnosModel::borrar_alumno($datosController, "practica_07_alumnos");
 			if($respuesta == "success"){
 				Nucleo::Redirigir("lista-alumnos");
 			}

@@ -41,12 +41,20 @@
                 Usuarios <br><?php echo CRUD::estadistica("practica_07_users", null, null); ?>
             </a>
             <a href="index.php?action=lista-profesores" class="btn btn-sq-lg btn-success">
-              <i class="fa fa-user fa-5x"></i><br/>
+              <i class="fa fa-chalkboard-teacher fa-5x"></i><br/>
               Profesores <br><?php echo CRUD::estadistica("practica_07_profesores", null, null); ?>
             </a>
             <a href="index.php?action=lista-alumnos" class="btn btn-sq-lg btn-info">
-              <i class="fa fa-bed fa-5x"></i><br/>
+              <i class="fa fa-user-graduate fa-5x"></i><br/>
               Alumnos <br><?php echo CRUD::estadistica("practica_07_alumnos", null, null); ?>
+            </a>
+            <a href="index.php?action=lista-materias" class="btn btn-sq-lg btn-danger">
+              <i class="fa fa-tag fa-5x"></i><br/>
+              Materias <br><?php echo CRUD::estadistica("practica_07_materias", null, null); ?>
+            </a>
+            <a href="index.php?action=lista-grupos" class="btn btn-sq-lg btn-warning">
+              <i class="fa fa-school fa-5x"></i><br/>
+              Grupos <br><?php echo CRUD::estadistica("practica_07_grupos", null, null); ?>
             </a>
           </center>
         </div>

@@ -118,7 +118,7 @@ $ingreso -> ingresoUsuarioController();
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-users fa-fw"></i> Profesores<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-chalkboard-teacher fa-fw"></i> Profesores<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="index.php?action=registrar-profesor">Agregar nuevo</a>
@@ -130,7 +130,7 @@ $ingreso -> ingresoUsuarioController();
                             <!-- /.nav-second-level -->
                         </li>
                         <li>
-                            <a href="#"><i class="fa fa-users fa-fw"></i> Alumnos<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-user-graduate fa-fw"></i> Alumnos<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
                                     <a href="index.php?action=registrar-alumno">Agregar nuevo</a>
@@ -140,6 +140,30 @@ $ingreso -> ingresoUsuarioController();
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-tag fa-fw"></i> Materias<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="index.php?action=registrar-materia">Agregar nuevo</a>
+                                </li>
+                                <li>
+                                    <a href="index.php?action=lista-materias">Lista</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level (MATERIAS )-->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-school fa-fw"></i> Grupos<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="index.php?action=registrar-grupo">Agregar nuevo</a>
+                                </li>
+                                <li>
+                                    <a href="index.php?action=lista-grupos">Lista</a>
+                                </li>
+                            </ul>
+                            <!-- /.nav-second-level (GRUPOS)-->
                         </li>
                     </ul>
                     <!-- /#side-menu -->
