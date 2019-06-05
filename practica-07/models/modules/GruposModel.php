@@ -37,7 +37,7 @@ class GruposModel extends Conexion {
 	#EDITAR materia- este no actualiza, muestra la info sobre el form de editar
 	#-------------------------------------
 
-	public static function editar_grupos($datosModel, $tabla){
+	public static function editar_grupo($datosModel, $tabla){
 		$stmt = Conexion::conectar()->prepare("SELECT * FROM $tabla WHERE id = :id");
 		$stmt->bindParam(":id", $datosModel, PDO::PARAM_INT);	
 		$stmt->execute();

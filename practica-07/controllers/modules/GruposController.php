@@ -79,7 +79,7 @@
 	public static function borrar_grupo(){
 		if(isset($_GET["idBorrar"])){
 			$datosController = $_GET["idBorrar"];
-			$respuesta = GruposModel::borrar_materia($datosController, "practica_07_grupos");
+			$respuesta = GruposModel::borrar_grupo($datosController, "practica_07_grupos");
 			if($respuesta == "success"){
 				Nucleo::Redirigir("lista-grupos");
 			}
