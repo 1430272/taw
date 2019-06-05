@@ -45,11 +45,11 @@
 
 	#Cliente por ID	// Como se llama el alumno que tiene esta ID para imprimir los nombres de varios id
 	#------------------------------------
-	/*public static function alumno_por_id($idc){
+	public static function materia_por_id($idc){
 		$datosController = $idc;
 		$respuesta = AlumnosModel::editar_alumno($datosController, "practica_07_alumnos");
-		return $respuesta["nombre"].' '.$respuesta["apellido_paterno"].' '.$respuesta["apellido_materno"];
-	}*/
+		return $respuesta["nombre"];
+	}
 
 
 	#ACTUALIZAR materia

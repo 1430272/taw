@@ -26,9 +26,9 @@
 		foreach($respuesta as $row => $item){
 		echo'<tr>
 				<td>'.$item["id"].'</td>
-				<td>'.$item["id_carrera"].'</td>
-				<td>'.$item["id_materia"].'</td>
-				<td>'.$item["id_profesor"].'</td>
+				<td>'.CarrerasController::carrera_por_id($item["id_carrera"]).'</td>
+				<td>'.MateriasController::materia_por_id($item["id_materia"]).'</td>
+				<td>'.ProfesoresController::profesor_por_id($item["id_profesor"]).'</td>
 				<td><a href="index.php?action=editar-grupo&id='.$item["id"].'"><button>Editar</button></a> - <a href="index.php?action=lista-grupos&idBorrar='.$item["id"].'"><button>Borrar</button></a></td>
 			</tr>';
 		}
