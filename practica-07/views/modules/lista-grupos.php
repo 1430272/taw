@@ -8,8 +8,9 @@
 		<thead>
 			<tr>
 				<th>id</th>
-				<th>clave</th>
-				<th>nombre</th>
+				<th>Carrera</th>
+				<th>Materia</th>
+				<th>Profesor</th>
 			</tr>
 		</thead>
 		<tbody>
